@@ -1,11 +1,9 @@
-'use strict';
-
 var karma  = require('karma'),
     path   = require('path'),
     paths  = require('../config/paths');
 
-module.exports = function () {
-    return function(done) {
+module.exports = () => {
+    return (done) => {
         karma.server.start({
             configFile: path.join(paths.gulp, '/karma.config.js'),
             singleRun: true

@@ -1,10 +1,8 @@
-'use strict';
-
 var autoprefixer = require('autoprefixer'),
     browserSync  = require('browser-sync');
 
-module.exports = function (gulp, $, paths, u) {
-    return function(){
+module.exports =  (gulp, $, paths, u) => {
+    return () => {
         gulp.src([paths.styles.src + '**/*.scss'])
             .pipe( $.plumber(u.notifier.error()) )
             .pipe( $.sass() )

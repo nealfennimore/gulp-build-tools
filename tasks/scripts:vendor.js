@@ -1,11 +1,9 @@
-'use strict';
-
 var browserify   = require('browserify'),
     _            = require('lodash'),
     source       = require('vinyl-source-stream');
 
-module.exports = function (gulp, $, paths, u){
-    return function() {
+module.exports = (gulp, $, paths, u) => {
+    return () => {
         var bundler  = browserify(),
             packages = u.packages.browser();
 

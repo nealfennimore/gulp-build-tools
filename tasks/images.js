@@ -1,7 +1,5 @@
-'use strict';
-
-module.exports = function (gulp, $, paths, u) {
-    return function(){
+module.exports = (gulp, $, paths, u) => {
+    return () => {
         gulp.src(paths.images.src + '**/*')
             .pipe($.cache(
                 $.imagemin({

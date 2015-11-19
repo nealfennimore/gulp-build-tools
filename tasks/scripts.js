@@ -1,5 +1,3 @@
-'use strict';
-
 var browserify  = require('browserify'),
     browserSync = require('browser-sync'),
     source      = require('vinyl-source-stream'),
@@ -9,12 +7,12 @@ var browserify  = require('browserify'),
     path        = require('path'),
     fs          = require('fs');
 
-module.exports = function (gulp, $, paths, u){
+module.exports = (gulp, $, paths, u) => {
     var babelOpts = JSON.parse(
         fs.readFileSync(path.join(paths.gulp, '.babelrc'), {encoding: 'UTF8'})
     );
 
-    return function() {
+    return () => {
         var externals = _.keys(u.packages.browser());
 
         browserify([paths.scripts.src + 'app.js'], {

@@ -1,12 +1,8 @@
-'use strict';
-
 var path  = require('path'),
     paths = require('../config/paths');
 
 module.exports = function(gulp, $){
     function handleError() {
-        var args = Array.prototype.slice.call(arguments);
-
         return {
             errorHandler: function(err){
                 $.notify.onError({
