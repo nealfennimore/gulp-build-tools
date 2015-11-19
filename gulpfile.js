@@ -1,8 +1,7 @@
-'use strict';
-
 var gulp    = require('gulp'),
-    plugins = require('gulp-load-plugins')(),
     paths   = require('./config/paths');
+
+var plugins = require('gulp-load-plugins')();
 
 var utils = {
     notifier: require('./utils/notifier')(gulp, plugins, paths),
