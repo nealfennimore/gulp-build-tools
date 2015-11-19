@@ -21,6 +21,7 @@ gulp.task('styles', getTask('styles'));
 gulp.task('test', getTask('test'));
 
 gulp.task('default', ['browserSync'], function() {
+    gulp.watch([paths.images.src + '**/*'], ['images']);
     gulp.watch([paths.styles.src + '**/*.scss'], ['styles']);
     gulp.watch([paths.scripts.src + '**/*.js'], ['scripts']);
     gulp.watch([paths.root + 'package.json'], ['scripts:vendor']);
