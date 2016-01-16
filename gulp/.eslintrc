@@ -1,0 +1,8 @@
+{
+    "extends": "eslint-config-nfen",
+    "env": {
+        "node": true,
+        "browser": true,
+        "mocha": true
+    }
+}
