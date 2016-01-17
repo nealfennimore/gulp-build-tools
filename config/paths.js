@@ -17,6 +17,10 @@ var paths = {
         src: path.join(src, '/images/'),
         dist: path.join(dist, '/images/')
     },
+    fonts: {
+        src: path.join(src, '/fonts/'),
+        dist: path.join(dist, '/fonts/')
+    },
     scripts: {
         src: path.join(src, '/scripts/'),
         dist: path.join(dist, '/scripts/')

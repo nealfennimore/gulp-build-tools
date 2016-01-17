@@ -17,6 +17,7 @@ gulp.task('nodemon', getTask('nodemon'));
 gulp.task('browserReload', getTask('browserReload'));
 gulp.task('browserSync', ['nodemon'], getTask('browserSync'));
 gulp.task('images', getTask('images'));
+gulp.task('fonts', getTask('fonts'));
 gulp.task('scripts', getTask('scripts'));
 gulp.task('scripts:vendor', getTask('scripts:vendor'));
 gulp.task('styles', getTask('styles'));
@@ -24,6 +25,7 @@ gulp.task('test', getTask('test'));
 
 gulp.task('default', ['browserSync'], function() {
     gulp.watch([paths.images.src + '**/*'], ['images']);
+    gulp.watch([paths.fonts.src + '*'], ['fonts']);
     gulp.watch([paths.styles.src + '**/*.scss'], ['styles']);
     gulp.watch([paths.scripts.src + '**/*.js'], ['scripts']);
     gulp.watch([paths.root + 'package.json'], ['scripts:vendor']);
